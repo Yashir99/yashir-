@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You, Yashmin ❤️</title>
+    <style>
+        body {
+            background: url('https://source.unsplash.com/1600x900/?love,romantic') no-repeat center center/cover;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+        .btn {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .yes {
+            background-color: #28a745;
+            color: white;
+        }
+        .no {
+            background-color: #dc3545;
+            color: white;
+        }
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #ffcccb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hey Yashmin ❤️</h1>
+        <p>"Love you, and I think tumhen sunkar thoda ajeeb lagega ya fir ho sakta hai ki tumhe pata bhi ho pehle se ki main tumse bahut pyar karta hun... 
+        par koi problem nahin hai, mujhe fir bhi tumse utna hi pyar rahega jaisa main abhi ya isase pahle karta tha... "</p>
+        
+        <p>"Main yah sab acche time ya perfect time aane par batana chahta tha, lekin mujhse raha hi nahin gaya... 
+        aur vah Instagram ki DP wali baat - maine DP isiliye change ki thi taki main tumhara partner ban saku, reality mein na sahi, to Insta par hi sahi..."</p>
+
+        <p>"Mujhse bas itna hi kahna hai - please reject mat karna yaar! 
+        Lekin agar tumhari life mein koi problems hain, ya koi wajah hai jo tum mujhe bata nahi sakti, 
+        bas ek baar mujhe samjha dena... main utna to samajhdar ho hi gaya hoon ki tumhari baatein samajh sakoon."</p>
+
+        <p>"Aur tumne meri itni baatein suni, uske liye thank you... and I love you so much ❤️"</p>
+
+        <form action="https://formsubmit.co/yashir930@gmail.com" method="POST">
+            <input type="hidden" name="message" value="Yashmin ne Yes bola! ❤️">
+            <button type="submit" class="btn yes">Yes ❤️</button>
+        </form>
+        
+        <button class="btn no" onclick="document.getElementById('hidden-message').style.display='block'">No 💔</button>
+        
+        <div id="hidden-message" class="hidden-message">
+            😔 Koi baat nahi... main phir bhi tumhara intezar karunga.
+        </div>
+    </div>
+</body>
+</html>
