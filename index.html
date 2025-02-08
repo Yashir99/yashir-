@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Yashmin ❤️</title>
+    
+    <!-- Falling Hearts Animation -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+        body {
+            font-family: 'Dancing Script', cursive;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            text-align: center;
+            color: black;
+            padding: 30px;
+            overflow-x: hidden; /* X-axis scrolling disable, but Y-axis enable */
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .shayari {
+            font-style: italic;
+            font-size: 20px;
+            margin: 20px 0;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            font-size: 18px;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .no {
+            background-color: #f44336;
+            color: white;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Falling Hearts Animation */
+        .heart {
+            position: fixed;
+            font-size: 20px;
+            color: red;
+            animation: fall 5s linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-10vh) translateX(0); opacity: 1; }
+            100% { transform: translateY(100vh) translateX(20px); opacity: 0; }
+        }
+    </style>
+
+    <script>
+        function sendEmail(response) {
+            fetch("https://formsubmit.co/ajax/yashir930@gmail.com", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ answer: response })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert("Your response has been sent! ❤️");
+            })
+            .catch(error => console.error("Error:", error));
+        }
+
+        // Create Falling Hearts
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤️";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 500);
+    </script>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hy Yashmin...</h1>
+        <p>Main tumse kuch kehna chahta hoon, par shayad ye kehna zaroori nahi hai,  
+           kyunki shabdon ke bina bhi kuch baatein samjhi ja sakti hain.  
+           Hamari <b>playlist</b>, hamari <b>cute partner wali DP</b>, aur wo <b>chhoti-chhoti baatein</b>—shayad ye sab mere liye kuch zyada hi khaas ho gaye hain.  
+        </p>
+
+        <p class="shayari">
+            "Main tumse pyaar karta hoon,<br>
+            isliye nahi ki tumhari aankhein kitni khoobsurat hain,<br>
+            balki isliye ki jab tum mujhse baat karti ho,<br>
+            to mujhe meri aankhon se zyada tumhari aankhon par yakeen hota hai."
+        </p>
+
+        <p>Agar tumhe ye accept hai, to "YES" pe click karo, aur agar nahi, to "NO".</p>
+
+        <div class="buttons">
+            <button class="yes" onclick="sendEmail('YES')">YES ❤️</button>
+            <button class="no" onclick="sendEmail('NO')">NO 😢</button>
+        </div>
+    </div>
+
+</body>
+</html>
